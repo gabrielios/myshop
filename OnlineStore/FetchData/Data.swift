@@ -8,6 +8,8 @@
 import SwiftUI
 import Foundation
 
+
+
 struct Conversion : Decodable {
 let success: Bool
     let quotes : [String: Double]
@@ -15,7 +17,7 @@ let success: Bool
 
 
 
-struct Currency: Identifiable {
+struct CurrencyData: Identifiable {
     
     var id = UUID().uuidString
     var curryncyName : String
@@ -24,13 +26,14 @@ struct Currency: Identifiable {
 
 
 class FetchData: ObservableObject {
-    @Published var conversionData : [Currency] = []
+    @Published var conversionData : [CurrencyData] = []
+    public static let shared = FetchData()
    
     init() {
         fetch()
     }
     
-    func fetch() {
+    public func fetch() {
         let url = "http://api.currencylayer.com/live?access_key=80a9cf65f8c43aefc562614e6aa4a5b7&format=1"
         let session = URLSession(configuration: .default)
         session.dataTask(with: URL(string: url)!) { (data, _, _) in
@@ -38,11 +41,13 @@ class FetchData: ObservableObject {
             do{
                 let conversion = try JSONDecoder().decode(Conversion.self, from: JSONData)
                 print(conversion)
+                print(FetchData())
                 
                 DispatchQueue.main.async {
                     self.conversionData = conversion.quotes.compactMap({ (key,value)
-                        -> Currency? in
-                        return Currency(curryncyName: key, currencyValue: value)
+                        -> CurrencyData? in
+                        return CurrencyData(curryncyName: key, currencyValue: value)
+                        
                     })
 
                 }
@@ -54,3 +59,5 @@ class FetchData: ObservableObject {
         .resume()
     }
 }
+
+

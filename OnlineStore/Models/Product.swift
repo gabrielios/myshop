@@ -7,14 +7,22 @@
 
 import Foundation
 
+var viewModel = FetchData()
+
 struct Product: Identifiable {
     var id = UUID()
     var name: String
     var image: String
-    var price: Int
+    var price: Double
 }
 
-var productList = [Product(name: "Milk", image: "obj1", price: 2),
-                   Product(name: "Fazole", image: "obj2", price: 1),
-                   Product(name: "Hrasek", image: "obj3", price: 1),
-                   Product(name: "Vejce", image: "obj4", price: 3)]
+var price1 = 1.30
+var price2 = 0.73
+var price3 = 0.95
+var price4 = 2.10
+var PriceArr = [price1, price2, price3, price4]
+
+var productList = [Product(name: "Milk", image: "obj1", price: PriceArr[0]),
+                   Product(name: "Fazole", image: "obj2", price: PriceArr[1]),
+                   Product(name: "Hrasek", image: "obj3", price: PriceArr[2]),
+                   Product(name: "Vejce", image: "obj4", price: PriceArr[3])]

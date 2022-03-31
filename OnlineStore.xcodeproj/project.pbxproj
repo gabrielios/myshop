@@ -21,6 +21,7 @@
 		C63BBD6727EC8D0400012F72 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63BBD6627EC8D0400012F72 /* CartManager.swift */; };
 		C63BBD6927EC90A800012F72 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63BBD6827EC90A800012F72 /* ProductRow.swift */; };
 		C63BBD6C27EC957700012F72 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63BBD6B27EC957600012F72 /* Data.swift */; };
+		C6E684D827F5440800C6C478 /* PriceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E684D727F5440700C6C478 /* PriceDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C63BBD6627EC8D0400012F72 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		C63BBD6827EC90A800012F72 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		C63BBD6B27EC957600012F72 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		C6E684D727F5440700C6C478 /* PriceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				C63BBD6B27EC957600012F72 /* Data.swift */,
+				C6E684D727F5440700C6C478 /* PriceDetails.swift */,
 			);
 			path = FetchData;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				C63BBD3227EC795400012F72 /* OnlineStoreApp.swift in Sources */,
 				C63BBD6927EC90A800012F72 /* ProductRow.swift in Sources */,
 				C63BBD5D27EC7AE400012F72 /* Product.swift in Sources */,
+				C6E684D827F5440800C6C478 /* PriceDetails.swift in Sources */,
 				C63BBD6027EC7CF200012F72 /* ProductCard.swift in Sources */,
 				C63BBD6C27EC957700012F72 /* Data.swift in Sources */,
 				C63BBD6327EC898100012F72 /* CardButton.swift in Sources */,
